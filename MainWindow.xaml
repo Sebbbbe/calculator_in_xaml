@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:calculater_training"
         mc:Ignorable="d"
         Title="Calculator" Height="510" Width="335">
-    <Grid>
+    <Grid >
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
@@ -29,32 +29,33 @@
         <TextBox x:Name="txtBox" Grid.ColumnSpan="4" FontSize="30" TextAlignment="right" VerticalAlignment="Bottom" IsReadOnly="True" BorderThickness="0"    >0</TextBox>
         
         <!-- Numbers-->
-        
-        
-        <Button x:Name="btn7" Grid.Column="0" Grid.Row="3">7</Button>
-        <Button x:Name="btn8"  Grid.Column="1" Grid.Row="3">8</Button>
-        <Button x:Name="btn9" Grid.Column="2" Grid.Row="3">9</Button>
 
-        <Button x:Name="btn4" Grid.Column="0" Grid.Row="4" >4</Button>
-        <Button x:Name="btn5" Grid.Column="1" Grid.Row="4">5</Button>
-        <Button x:Name="btn6" Grid.Column="2" Grid.Row="4">6</Button>
+      
+        <Button x:Name="btn7" Grid.Column="0" Grid.Row="3" Click="btn7_Click">7</Button>
+        <Button x:Name="btn8"  Grid.Column="1" Grid.Row="3" Click="btn8_Click">8</Button>
+        <Button x:Name="btn9" Grid.Column="2" Grid.Row="3" Click="btn9_Click">9</Button>
 
-        <Button x:Name="btn1" Grid.Column="0" Grid.Row="5" Click="btn1_Click">1</Button>
-        <Button x:Name="btn2" Grid.Column="1" Grid.Row="5">2</Button>
-        <Button x:Name="btn3" Grid.Column="2" Grid.Row="5">3</Button>
+        <Button x:Name="btn4" Grid.Column="0" Grid.Row="4" Click="btn4_Click" >4</Button>
+        <Button x:Name="btn5" Grid.Column="1" Grid.Row="4" Click="btn5_Click">5</Button>
+        <Button x:Name="btn6" Grid.Column="2" Grid.Row="4" Click="btn6_Click">6</Button>
+
+        <Button x:Name="btn1" Grid.Column="0" Grid.Row="5" Click="btn1_Click" >1</Button>
+        <Button x:Name="btn2" Grid.Column="1" Grid.Row="5" Click="btn2_Click">2</Button>
+        <Button x:Name="btn3" Grid.Column="2" Grid.Row="5" Click="btn3_Click">3</Button>
 
 
-        <Button x:Name="btn0"  Grid.Column="1" Grid.Row="6">0</Button>
+        <Button x:Name="btn0"  Grid.Column="1" Grid.Row="6" Click="btn0_Click">0</Button>
+
         
-        
+
         <!--Math Operators-->
 
 
         <Button x:Name="btnDivided"  Grid.Column="3" Grid.Row="2">÷</Button>
         <Button x:Name="btnMultiply"  Grid.Column="3" Grid.Row="3">X</Button>
         <Button x:Name="btnMinus"  Grid.Column="3" Grid.Row="4">-</Button>
-        <Button x:Name="btnPlus"  Grid.Column="3" Grid.Row="5">+</Button>
-        <Button x:Name="btnEquals"  Grid.Column="3" Grid.Row="6">=</Button>
+        <Button x:Name="btnPlus"  Grid.Column="3" Grid.Row="5" Click="btnPlus_Click">+</Button>
+        <Button x:Name="btnEquals"  Grid.Column="3" Grid.Row="6" Click="btnEquals_Click">=</Button>
         
         
         <!--Extras -->
