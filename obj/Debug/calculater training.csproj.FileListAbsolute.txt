@@ -1,0 +1,15 @@
+C:\Users\sebas\source\repos\calculater training\calculater training\bin\Debug\calculater training.exe.config
+C:\Users\sebas\source\repos\calculater training\calculater training\bin\Debug\calculater training.exe
+C:\Users\sebas\source\repos\calculater training\calculater training\bin\Debug\calculater training.pdb
+C:\Users\sebas\source\repos\calculater training\calculater training\obj\Debug\calculater training.csprojAssemblyReference.cache
+C:\Users\sebas\source\repos\calculater training\calculater training\obj\Debug\MainWindow.g.cs
+C:\Users\sebas\source\repos\calculater training\calculater training\obj\Debug\App.g.cs
+C:\Users\sebas\source\repos\calculater training\calculater training\obj\Debug\calculater training_MarkupCompile.cache
+C:\Users\sebas\source\repos\calculater training\calculater training\obj\Debug\calculater training_MarkupCompile.lref
+C:\Users\sebas\source\repos\calculater training\calculater training\obj\Debug\MainWindow.baml
+C:\Users\sebas\source\repos\calculater training\calculater training\obj\Debug\calculater training.g.resources
+C:\Users\sebas\source\repos\calculater training\calculater training\obj\Debug\calculater_training.Properties.Resources.resources
+C:\Users\sebas\source\repos\calculater training\calculater training\obj\Debug\calculater training.csproj.GenerateResource.cache
+C:\Users\sebas\source\repos\calculater training\calculater training\obj\Debug\calculater training.csproj.CoreCompileInputs.cache
+C:\Users\sebas\source\repos\calculater training\calculater training\obj\Debug\calculater training.exe
+C:\Users\sebas\source\repos\calculater training\calculater training\obj\Debug\calculater training.pdb
