@@ -20,9 +20,25 @@ namespace calculater_training
     /// </summary>
     public partial class MainWindow : Window
     {
+        string empty = "";
+        float number1 = 0;
+        float total = 0;
         public MainWindow()
         {
             InitializeComponent();
         }
+      
+	
+
+        private void btn1_Click(object sender, RoutedEventArgs e)
+        {
+
+
+            total = (number1 * 10) + 1;
+                txtBox.Text = number1.ToString();
+       
+        }
+
+        
     }
 }

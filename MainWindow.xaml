@@ -26,18 +26,20 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
 
-        <TextBox Grid.ColumnSpan="4" FontSize="30" TextAlignment="right" VerticalAlignment="Bottom" IsReadOnly="True" BorderThickness="0"    >0</TextBox>
+        <TextBox x:Name="txtBox" Grid.ColumnSpan="4" FontSize="30" TextAlignment="right" VerticalAlignment="Bottom" IsReadOnly="True" BorderThickness="0"    >0</TextBox>
         
         <!-- Numbers-->
+        
+        
         <Button x:Name="btn7" Grid.Column="0" Grid.Row="3">7</Button>
         <Button x:Name="btn8"  Grid.Column="1" Grid.Row="3">8</Button>
         <Button x:Name="btn9" Grid.Column="2" Grid.Row="3">9</Button>
 
-        <Button x:Name="btn4" Grid.Column="0" Grid.Row="4">4</Button>
+        <Button x:Name="btn4" Grid.Column="0" Grid.Row="4" >4</Button>
         <Button x:Name="btn5" Grid.Column="1" Grid.Row="4">5</Button>
         <Button x:Name="btn6" Grid.Column="2" Grid.Row="4">6</Button>
 
-        <Button x:Name="btn1" Grid.Column="0" Grid.Row="5">1</Button>
+        <Button x:Name="btn1" Grid.Column="0" Grid.Row="5" Click="btn1_Click">1</Button>
         <Button x:Name="btn2" Grid.Column="1" Grid.Row="5">2</Button>
         <Button x:Name="btn3" Grid.Column="2" Grid.Row="5">3</Button>
 
