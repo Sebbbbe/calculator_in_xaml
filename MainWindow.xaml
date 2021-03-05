@@ -29,57 +29,57 @@
         <TextBox Grid.ColumnSpan="4" FontSize="30" TextAlignment="right" VerticalAlignment="Bottom" IsReadOnly="True" BorderThickness="0"    >0</TextBox>
         
         <!-- Numbers-->
-        <Button Grid.Column="0" Grid.Row="3">7</Button>
-        <Button Grid.Column="1" Grid.Row="3">8</Button>
-        <Button Grid.Column="2" Grid.Row="3">9</Button>
+        <Button x:Name="btn7" Grid.Column="0" Grid.Row="3">7</Button>
+        <Button x:Name="btn8"  Grid.Column="1" Grid.Row="3">8</Button>
+        <Button x:Name="btn9" Grid.Column="2" Grid.Row="3">9</Button>
 
-        <Button Grid.Column="0" Grid.Row="4">4</Button>
-        <Button Grid.Column="1" Grid.Row="4">5</Button>
-        <Button Grid.Column="2" Grid.Row="4">6</Button>
+        <Button x:Name="btn4" Grid.Column="0" Grid.Row="4">4</Button>
+        <Button x:Name="btn5" Grid.Column="1" Grid.Row="4">5</Button>
+        <Button x:Name="btn6" Grid.Column="2" Grid.Row="4">6</Button>
 
-        <Button Grid.Column="0" Grid.Row="5">1</Button>
-        <Button Grid.Column="1" Grid.Row="5">2</Button>
-        <Button Grid.Column="2" Grid.Row="5">3</Button>
+        <Button x:Name="btn1" Grid.Column="0" Grid.Row="5">1</Button>
+        <Button x:Name="btn2" Grid.Column="1" Grid.Row="5">2</Button>
+        <Button x:Name="btn3" Grid.Column="2" Grid.Row="5">3</Button>
 
 
-        <Button Grid.Column="1" Grid.Row="6">0</Button>
+        <Button x:Name="btn0"  Grid.Column="1" Grid.Row="6">0</Button>
         
         
         <!--Math Operators-->
 
 
-        <Button Grid.Column="3" Grid.Row="2">÷</Button>
-        <Button Grid.Column="3" Grid.Row="3">X</Button>
-        <Button Grid.Column="3" Grid.Row="4">-</Button>
-        <Button Grid.Column="3" Grid.Row="5">+</Button>
-        <Button Grid.Column="3" Grid.Row="6">=</Button>
+        <Button x:Name="btnDivided"  Grid.Column="3" Grid.Row="2">÷</Button>
+        <Button x:Name="btnMultiply"  Grid.Column="3" Grid.Row="3">X</Button>
+        <Button x:Name="btnMinus"  Grid.Column="3" Grid.Row="4">-</Button>
+        <Button x:Name="btnPlus"  Grid.Column="3" Grid.Row="5">+</Button>
+        <Button x:Name="btnEquals"  Grid.Column="3" Grid.Row="6">=</Button>
         
         
         <!--Extras -->
 
-        <Button Grid.Column="2" Grid.Row="6">.</Button>
+        <Button x:Name="btnDecimal"  Grid.Column="2" Grid.Row="6">.</Button>
         
         
         <!-- plus-minus Button-->
-        <Button Grid.Column="0" Grid.Row="6">+/-</Button>
+        <Button x:Name="btnMultiplyMinus1"  Grid.Column="0" Grid.Row="6">+/-</Button>
 
 
         <!--Rest button-->
-        <Button Grid.Column="0" Grid.Row="1">%</Button>
+        <Button x:Name="btnRest"  Grid.Column="0" Grid.Row="1">%</Button>
         
         
         <!-- Reset Buttons? -->
- 
-        <Button Grid.Column="1" Grid.Row="1">CE</Button>
-        <Button Grid.Column="2" Grid.Row="1">C</Button>
-        <Button Grid.Column="3" Grid.Row="1" >Back</Button>
+
+        <Button x:Name="btnClearEntry"  Grid.Column="1" Grid.Row="1">CE</Button>
+        <Button x:Name="btnClear"  Grid.Column="2" Grid.Row="1">C</Button>
+        <Button x:Name="btnBack"  Grid.Column="3" Grid.Row="1" >Back</Button>
         
         
         
          <!-- Special operators-->
-        <Button Grid.Column="0" Grid.Row="2">1/x</Button>
-        <Button Grid.Column="1" Grid.Row="2" >x²</Button>
-        <Button Grid.Column="2" Grid.Row="2" >√2</Button>
+        <Button x:Name="btn1DividedOfX"  Grid.Column="0" Grid.Row="2">1/x</Button>
+        <Button x:Name="btPowerOfX"  Grid.Column="1" Grid.Row="2" >x²</Button>
+        <Button x:Name="btn1DividedX"  Grid.Column="2" Grid.Row="2" >√2</Button>
        
 
 
