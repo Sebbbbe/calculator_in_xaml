@@ -20,7 +20,7 @@ namespace calculater_training
     /// </summary>
     public partial class MainWindow : Window
     {
-        string empty = "";
+     
         string operation = "";
        
         
@@ -322,6 +322,57 @@ namespace calculater_training
             {
                 number1 = number1 * -1;
             }
+        }
+
+        private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+            //clears Everything
+            total = 0;
+            totalNumbers = 0;
+            isDecimal = false;
+            isNegative = false;
+            operation = "";
+            txtBox.Text = "0";
+        }
+
+        private void btnClearEntry_Click(object sender, RoutedEventArgs e)
+        {
+            //Clears everything on this action say 587 * 545 then it clears 545 only and 587 is still left
+
+            total = 0;
+            isDecimal = false;
+            isNegative = false;
+            txtBox.Text = "0";
+        }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            //Clears the last action
+        }
+
+        private void btnMultiplyMinus1_Click(object sender, RoutedEventArgs e)
+        {
+            total = total * -1;
+            txtBox.Text = total.ToString();
+        }
+
+        private void btn1DividedOfX_Click(object sender, RoutedEventArgs e)
+        {
+            total = 1 / total;
+            txtBox.Text = total.ToString();
+
+        }
+
+        private void btPowerOfX_Click(object sender, RoutedEventArgs e)
+        {
+            total = total * total;
+            txtBox.Text = total.ToString();
+        }
+
+        private void btn1DividedX_Click(object sender, RoutedEventArgs e)
+        {
+            total = (float)Math.Sqrt(total);
+            txtBox.Text = total.ToString();
         }
     }
 }
