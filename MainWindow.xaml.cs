@@ -261,6 +261,9 @@ namespace calculater_training
                 totalNumbers += total;
                 total = 0;
                 operation = "-";
+                isNegative = true;
+                IsNegative();
+
             }
 
         }
