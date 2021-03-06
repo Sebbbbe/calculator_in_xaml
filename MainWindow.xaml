@@ -51,16 +51,16 @@
         <!--Math Operators-->
 
 
-        <Button x:Name="btnDivided"  Grid.Column="3" Grid.Row="2">÷</Button>
-        <Button x:Name="btnMultiply"  Grid.Column="3" Grid.Row="3">X</Button>
-        <Button x:Name="btnMinus"  Grid.Column="3" Grid.Row="4">-</Button>
+        <Button x:Name="btnDivided"  Grid.Column="3" Grid.Row="2" Click="btnDivided_Click">÷</Button>
+        <Button x:Name="btnMultiply"  Grid.Column="3" Grid.Row="3" Click="btnMultiply_Click">X</Button>
+        <Button x:Name="btnMinus"  Grid.Column="3" Grid.Row="4" Click="btnMinus_Click">-</Button>
         <Button x:Name="btnPlus"  Grid.Column="3" Grid.Row="5" Click="btnPlus_Click">+</Button>
         <Button x:Name="btnEquals"  Grid.Column="3" Grid.Row="6" Click="btnEquals_Click">=</Button>
         
         
         <!--Extras -->
 
-        <Button x:Name="btnDecimal"  Grid.Column="2" Grid.Row="6">.</Button>
+        <Button x:Name="btnDecimal"  Grid.Column="2" Grid.Row="6" Click="btnDecimal_Click">.</Button>
         
         
         <!-- plus-minus Button-->

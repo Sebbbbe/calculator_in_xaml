@@ -23,7 +23,11 @@ namespace calculater_training
         string empty = "";
         float number1 = 0;
         float total = 0;
-        float totalNumbers = 0;
+        float totalNumbers;
+        string operation = "";
+        bool isDecimal = false;
+        float decimalNumber = 0.1F;
+        float x = 0.1F;
         public MainWindow()
         {
             InitializeComponent();
@@ -35,86 +39,249 @@ namespace calculater_training
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
             number1 = 1;
-            total = (total * 10) + number1;
-            txtBox.Text = total.ToString();
+            if (isDecimal == true)
+            {
+                IsDecimal();
+            }
+            else
+            {
+                
+                total = (total * 10) + number1;
+                txtBox.Text = total.ToString();
+            }
+           
+           
+
         }
 
         private void btn2_Click(object sender, RoutedEventArgs e)
         {
             number1 = 2;
-            total = (total * 10) + number1;
-            txtBox.Text = total.ToString();
+            if (isDecimal == true)
+            {
+                IsDecimal();
+            }
+            else
+            {
+               
+                total = (total * 10) + number1;
+                txtBox.Text = total.ToString();
+            }
+           
         }
 
         private void btn3_Click(object sender, RoutedEventArgs e)
         {
             number1 = 3;
-            total = (total * 10) + number1;
-            txtBox.Text = total.ToString();
+            if (isDecimal == true)
+            {
+                IsDecimal();
+            }
+          else 
+            {
+              
+                total = (total * 10) + number1;
+                txtBox.Text = total.ToString();
+            }
+           
         }
 
         private void btn4_Click(object sender, RoutedEventArgs e)
         {
             number1 = 4;
-            total = (total * 10) + number1;
-            txtBox.Text = total.ToString();
+            if (isDecimal == true)
+            {
+                IsDecimal();
+            }
+
+         else 
+            {
+             
+                total = (total * 10) + number1;
+                txtBox.Text = total.ToString();
+            }
+          
         }
 
         private void btn5_Click(object sender, RoutedEventArgs e)
         {
             number1 = 5;
-            total = (total * 10) + number1;
-            txtBox.Text = total.ToString();
+            if (isDecimal == true)
+            {
+                IsDecimal();
+            }
+
+           else 
+            {
+               
+                total = (total * 10) + number1;
+                txtBox.Text = total.ToString();
+            }
+            
         }
 
         private void btn6_Click(object sender, RoutedEventArgs e)
         {
             number1 = 6;
-            total = (total * 10) + number1;
-            txtBox.Text = total.ToString();
+            if (isDecimal == true)
+            {
+                IsDecimal();
+            }
+         else
+            {
+              
+                total = (total * 10) + number1;
+                txtBox.Text = total.ToString();
+            }
+           
         }
 
         private void btn7_Click(object sender, RoutedEventArgs e)
         {
             number1 = 7;
-            total = (total * 10) + number1;
-            txtBox.Text = total.ToString();
+            if (isDecimal == true)
+            {
+                IsDecimal();
+            }
+           else 
+            {
+                ;
+                total = (total * 10) + number1;
+                txtBox.Text = total.ToString();
+            }
+            
         }
 
         private void btn8_Click(object sender, RoutedEventArgs e)
         {
             number1 = 8;
-            total = (total * 10) + number1;
-            txtBox.Text = total.ToString();
+            if (isDecimal == true)
+            {
+                IsDecimal();
+            }
+           else 
+            {
+              
+                total = (total * 10) + number1;
+                txtBox.Text = total.ToString();
+            }
+         
         }
 
         private void btn9_Click(object sender, RoutedEventArgs e)
         {
             number1 = 9;
-            total = (total * 10) + number1;
-            txtBox.Text = total.ToString();
+            if (isDecimal == true)
+            {
+                IsDecimal();
+            }
+           else 
+            {
+                
+                total = (total * 10) + number1;
+                txtBox.Text = total.ToString();
+            }
+           
         }
 
         private void btn0_Click(object sender, RoutedEventArgs e)
         {
             number1 = 0;
-            total = (total * 10) + number1;
-            txtBox.Text = total.ToString();
+            if (isDecimal == true)
+            {
+                IsDecimal();
+            }
+          
+            else  
+            {
+               
+                total = (total * 10) + number1;
+                txtBox.Text = total.ToString();
+            }
+           
         }
 
         private void btnPlus_Click(object sender, RoutedEventArgs e)
         {
+            isDecimal = false;
             txtBox.Text = "0";
-            totalNumbers = total;
+            totalNumbers += total;
             total = 0;
+            operation = "+";
         }
 
         private void btnEquals_Click(object sender, RoutedEventArgs e)
         {
-            totalNumbers = totalNumbers + total;
-            txtBox.Text = totalNumbers.ToString();
+            isDecimal = false;
+            switch (operation)
+            {
+                case "+": txtBox.Text = (totalNumbers + total).ToString();
+                    break;
+                case "*": txtBox.Text = (totalNumbers * total).ToString();
+                    break;
+                case "-": txtBox.Text = (totalNumbers - total).ToString();
+                    break;
+                case "/": txtBox.Text = (totalNumbers / total).ToString();
+                    break;
+            }
+
+        
             total = 0;
             totalNumbers = 0;
+
+        }
+
+        private void btnMultiply_Click(object sender, RoutedEventArgs e)
+        {
+            isDecimal = false;
+            totalNumbers += total;
+            txtBox.Text = "0";
+            operation = "*";
+            total = 0;
+            
+
+        }
+
+        private void btnMinus_Click(object sender, RoutedEventArgs e)
+        {
+
+            isDecimal = false;
+            txtBox.Text = "0";
+            totalNumbers += total;
+            total = 0;
+            operation = "-";
+        }
+
+        private void btnDivided_Click(object sender, RoutedEventArgs e)
+        {
+            isDecimal = false;
+            totalNumbers += total;
+            txtBox.Text = "0";
+            operation = "/";
+            total = 0;
+        }
+
+        private void btnDecimal_Click(object sender, RoutedEventArgs e)
+        {
+            txtBox.Text = total + ".";
+            isDecimal = true;
+        }
+
+
+        private void IsDecimal()
+        {
+
+
+                decimalNumber = number1 * x;
+               
+                total += decimalNumber;
+                 x *= 0.1F;
+                 decimalNumber = 0.1F;
+                 txtBox.Text = total.ToString();
+                
+            
+          
+            
 
         }
     }
