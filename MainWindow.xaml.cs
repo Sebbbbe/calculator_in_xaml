@@ -21,13 +21,20 @@ namespace calculater_training
     public partial class MainWindow : Window
     {
         string empty = "";
+        string operation = "";
+       
+        
         float number1 = 0;
         float total = 0;
         float totalNumbers;
-        string operation = "";
-        bool isDecimal = false;
         float decimalNumber = 0.1F;
         float x = 0.1F;
+       
+        bool isDecimal = false;
+        bool isNegative = false;
+      
+
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -39,6 +46,7 @@ namespace calculater_training
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
             number1 = 1;
+            IsNegative();
             if (isDecimal == true)
             {
                 IsDecimal();
@@ -57,6 +65,7 @@ namespace calculater_training
         private void btn2_Click(object sender, RoutedEventArgs e)
         {
             number1 = 2;
+            IsNegative();
             if (isDecimal == true)
             {
                 IsDecimal();
@@ -73,6 +82,7 @@ namespace calculater_training
         private void btn3_Click(object sender, RoutedEventArgs e)
         {
             number1 = 3;
+            IsNegative();
             if (isDecimal == true)
             {
                 IsDecimal();
@@ -89,6 +99,7 @@ namespace calculater_training
         private void btn4_Click(object sender, RoutedEventArgs e)
         {
             number1 = 4;
+            IsNegative();
             if (isDecimal == true)
             {
                 IsDecimal();
@@ -106,6 +117,7 @@ namespace calculater_training
         private void btn5_Click(object sender, RoutedEventArgs e)
         {
             number1 = 5;
+            IsNegative();
             if (isDecimal == true)
             {
                 IsDecimal();
@@ -123,6 +135,7 @@ namespace calculater_training
         private void btn6_Click(object sender, RoutedEventArgs e)
         {
             number1 = 6;
+            IsNegative();
             if (isDecimal == true)
             {
                 IsDecimal();
@@ -139,6 +152,7 @@ namespace calculater_training
         private void btn7_Click(object sender, RoutedEventArgs e)
         {
             number1 = 7;
+            IsNegative();
             if (isDecimal == true)
             {
                 IsDecimal();
@@ -155,6 +169,7 @@ namespace calculater_training
         private void btn8_Click(object sender, RoutedEventArgs e)
         {
             number1 = 8;
+            IsNegative();
             if (isDecimal == true)
             {
                 IsDecimal();
@@ -171,6 +186,7 @@ namespace calculater_training
         private void btn9_Click(object sender, RoutedEventArgs e)
         {
             number1 = 9;
+            IsNegative();
             if (isDecimal == true)
             {
                 IsDecimal();
@@ -204,6 +220,7 @@ namespace calculater_training
         private void btnPlus_Click(object sender, RoutedEventArgs e)
         {
             isDecimal = false;
+            isNegative = false;
             txtBox.Text = "0";
             totalNumbers += total;
             total = 0;
@@ -213,6 +230,7 @@ namespace calculater_training
         private void btnEquals_Click(object sender, RoutedEventArgs e)
         {
             isDecimal = false;
+            isNegative = false;
             switch (operation)
             {
                 case "+": txtBox.Text = (totalNumbers + total).ToString();
@@ -234,6 +252,7 @@ namespace calculater_training
         private void btnMultiply_Click(object sender, RoutedEventArgs e)
         {
             isDecimal = false;
+            isNegative = false;
             totalNumbers += total;
             txtBox.Text = "0";
             operation = "*";
@@ -245,16 +264,32 @@ namespace calculater_training
         private void btnMinus_Click(object sender, RoutedEventArgs e)
         {
 
+
             isDecimal = false;
-            txtBox.Text = "0";
-            totalNumbers += total;
-            total = 0;
-            operation = "-";
+            isNegative = false;
+
+
+            if (txtBox.Text == "0")
+            {
+                txtBox.Text = "-0";
+                isNegative = true;
+            }
+
+
+            else
+            {
+                txtBox.Text = "0";
+                totalNumbers += total;
+                total = 0;
+                operation = "-";
+            }
+           
         }
 
         private void btnDivided_Click(object sender, RoutedEventArgs e)
         {
             isDecimal = false;
+            isNegative = false;
             totalNumbers += total;
             txtBox.Text = "0";
             operation = "/";
@@ -278,11 +313,15 @@ namespace calculater_training
                  x *= 0.1F;
                  decimalNumber = 0.1F;
                  txtBox.Text = total.ToString();
-                
-            
-          
-            
+ 
+        }
 
+        private void IsNegative()
+        {
+            if (isNegative == true)
+            {
+                number1 = number1 * -1;
+            }
         }
     }
 }
