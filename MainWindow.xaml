@@ -64,7 +64,7 @@
         
         
         <!-- plus-minus Button-->
-        <Button x:Name="btnMultiplyMinus1"  Grid.Column="0" Grid.Row="6" Click="btnMultiplyMinus1_Click">+/-</Button>
+        <Button x:Name="btnMultiplyMinus1"  Grid.Column="0" Grid.Row="6">+/-</Button>
 
 
         <!--Rest button-->
@@ -75,14 +75,14 @@
 
         <Button x:Name="btnClearEntry"  Grid.Column="1" Grid.Row="1" Click="btnClearEntry_Click">CE</Button>
         <Button x:Name="btnClear"  Grid.Column="2" Grid.Row="1" Click="btnClear_Click">C</Button>
-        <Button x:Name="btnBack"  Grid.Column="3" Grid.Row="1" Click="btnBack_Click" >Back</Button>
+        <Button x:Name="btnBack"  Grid.Column="3" Grid.Row="1"  >Back</Button>
         
         
         
          <!-- Special operators-->
-        <Button x:Name="btn1DividedOfX"  Grid.Column="0" Grid.Row="2" Click="btn1DividedOfX_Click">1/x</Button>
-        <Button x:Name="btPowerOfX"  Grid.Column="1" Grid.Row="2" Click="btPowerOfX_Click" >x²</Button>
-        <Button x:Name="btn1DividedX"  Grid.Column="2" Grid.Row="2" Click="btn1DividedX_Click" >√2</Button>
+        <Button x:Name="btn1DividedOfX"  Grid.Column="0" Grid.Row="2" >1/x</Button>
+        <Button x:Name="btPowerOfX"  Grid.Column="1" Grid.Row="2"  >x²</Button>
+        <Button x:Name="btn1DividedX"  Grid.Column="2" Grid.Row="2" >√2</Button>
        
 
 

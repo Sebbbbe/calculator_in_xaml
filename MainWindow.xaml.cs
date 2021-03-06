@@ -227,28 +227,6 @@ namespace calculater_training
             operation = "+";
         }
 
-        private void btnEquals_Click(object sender, RoutedEventArgs e)
-        {
-            isDecimal = false;
-            isNegative = false;
-            switch (operation)
-            {
-                case "+": txtBox.Text = (totalNumbers + total).ToString();
-                    break;
-                case "*": txtBox.Text = (totalNumbers * total).ToString();
-                    break;
-                case "-": txtBox.Text = (totalNumbers - total).ToString();
-                    break;
-                case "/": txtBox.Text = (totalNumbers / total).ToString();
-                    break;
-            }
-
-        
-            total = 0;
-            totalNumbers = 0;
-
-        }
-
         private void btnMultiply_Click(object sender, RoutedEventArgs e)
         {
             isDecimal = false;
@@ -257,7 +235,7 @@ namespace calculater_training
             txtBox.Text = "0";
             operation = "*";
             total = 0;
-            
+
 
         }
 
@@ -275,6 +253,7 @@ namespace calculater_training
                 isNegative = true;
             }
 
+           
 
             else
             {
@@ -283,7 +262,7 @@ namespace calculater_training
                 total = 0;
                 operation = "-";
             }
-           
+
         }
 
         private void btnDivided_Click(object sender, RoutedEventArgs e)
@@ -296,6 +275,51 @@ namespace calculater_training
             total = 0;
         }
 
+        private void btnEquals_Click(object sender, RoutedEventArgs e)
+        {
+            isDecimal = false;
+            isNegative = false;
+
+
+            if (operation == "*")
+            {
+                txtBox.Text = (totalNumbers * total).ToString();
+                totalNumbers *= total;
+                total = 0;
+            }
+
+           else if (operation == "+")
+            {
+                txtBox.Text = (totalNumbers + total).ToString();
+                totalNumbers += total;
+                total = 0;
+            }
+
+            else if (operation == "/")
+            {
+                txtBox.Text = (totalNumbers / total).ToString();
+                totalNumbers /= total;
+                total = 0;
+            }
+
+            else if (operation == "-")
+            {
+                txtBox.Text = (totalNumbers - total).ToString();
+                totalNumbers -= total;
+                total = 0;
+            }
+
+        
+        
+          
+            
+
+        }
+
+     
+
+       
+       
         private void btnDecimal_Click(object sender, RoutedEventArgs e)
         {
             txtBox.Text = total + ".";
@@ -345,34 +369,6 @@ namespace calculater_training
             txtBox.Text = "0";
         }
 
-        private void btnBack_Click(object sender, RoutedEventArgs e)
-        {
-            //Clears the last action
-        }
-
-        private void btnMultiplyMinus1_Click(object sender, RoutedEventArgs e)
-        {
-            total = total * -1;
-            txtBox.Text = total.ToString();
-        }
-
-        private void btn1DividedOfX_Click(object sender, RoutedEventArgs e)
-        {
-            total = 1 / total;
-            txtBox.Text = total.ToString();
-
-        }
-
-        private void btPowerOfX_Click(object sender, RoutedEventArgs e)
-        {
-            total = total * total;
-            txtBox.Text = total.ToString();
-        }
-
-        private void btn1DividedX_Click(object sender, RoutedEventArgs e)
-        {
-            total = (float)Math.Sqrt(total);
-            txtBox.Text = total.ToString();
-        }
+      
     }
 }
