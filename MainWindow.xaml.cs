@@ -13,12 +13,13 @@ namespace calculater_training
        
      
         double value = 0;
-        double testing = 0;
+        double tempValue = 0;
         
         string operation = "";
 
         bool cOperatorClickTwice = false;
         bool operationPressed = false;
+
 
         public MainWindow()
         {
@@ -27,18 +28,37 @@ namespace calculater_training
 
         private void btn_Click(object sender, RoutedEventArgs e)
         {
-            if (result.Text =="0" || operationPressed == true)
+
+            
+            if (result.Text =="0" || operationPressed == true  )
             {
                 result.Clear();
                
             }
 
+
+            
+            
+            
             Button b = (Button)sender;
             result.Text = result.Text + b.Content;
-            testing = double.Parse(result.Text);
+            tempValue = double.Parse(result.Text);
             
             operationPressed = false;
             cOperatorClickTwice = false;
+        }
+
+        private void btnDecimal_Click(object sender, RoutedEventArgs e)
+        {
+            if (result.Text == "0")
+            {
+                result.Text = "0.";
+            }
+            else
+            {
+                result.Text = tempValue + ".";
+            }
+
         }
 
         private void operator_click(object sender, RoutedEventArgs e)
@@ -49,7 +69,7 @@ namespace calculater_training
          
             if (operation == "")
             {
-                value += testing;
+                value += tempValue;
               
                 
             }
@@ -75,6 +95,9 @@ namespace calculater_training
                         result.Text = (value * Double.Parse(result.Text)).ToString();
                         value = double.Parse(result.Text);
                         break;
+
+                    
+                     
                     default:
                         break;
                 }
@@ -174,10 +197,10 @@ namespace calculater_training
         private void btnClearEntry_Click(object sender, RoutedEventArgs e)
         {
             result.Text = "0";
-            
-            
 
-            testing = 0;
+
+
+            tempValue = 0;
            
         }
 
@@ -188,10 +211,12 @@ namespace calculater_training
             operation = "";
            
             value = 0;
-            testing = 0;
+            tempValue = 0;
          
            
            
         }
+
+       
     }
 }

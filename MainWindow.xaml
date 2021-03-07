@@ -44,7 +44,7 @@
         <Button x:Name="btn3" Grid.Column="2" Grid.Row="5" Click="btn_Click"    >3</Button>
 
 
-        <Button x:Name="btn0"  Grid.Column="1" Grid.Row="6">0</Button>
+        <Button x:Name="btn0"  Grid.Column="1" Grid.Row="6" Click="btn_Click" >0</Button>
 
         
 
@@ -60,7 +60,7 @@
         
         <!--Extras -->
 
-        <Button x:Name="btnDecimal"  Grid.Column="2" Grid.Row="6" Click="btn_Click"  >.</Button>
+        <Button x:Name="btnDecimal"  Grid.Column="2" Grid.Row="6" Click="btnDecimal_Click"    >.</Button>
         
         
         <!-- plus-minus Button-->
