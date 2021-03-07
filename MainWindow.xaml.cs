@@ -42,9 +42,9 @@ namespace calculater_training
         private void operator_click(object sender, RoutedEventArgs e)
 
         {
-            Button b = (Button)sender;
-            operation = Convert.ToString(b.Content);
             
+
+         
             if (operation == "")
             {
                 value += testing;
@@ -66,18 +66,21 @@ namespace calculater_training
                     break;
                 case "/":
                     result.Text = (value / Double.Parse(result.Text)).ToString();
+                    value = double.Parse(result.Text);
                     break;
                 case "*":
                     result.Text = (value * Double.Parse(result.Text)).ToString();
+                    value = double.Parse(result.Text);
                     break;
                 default:
                     break;
             }
-           
-          
 
 
-       
+            Button b = (Button)sender;
+            operation = Convert.ToString(b.Content);
+
+
 
             equation.Content = value + " " + operation;
 
