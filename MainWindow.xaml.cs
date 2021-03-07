@@ -10,10 +10,12 @@ namespace calculater_training
     public partial class MainWindow : Window
     {
 
-
+       
+     
         double value = 0;
-        
+        double testing = 0;
         string operation = "";
+        string test = "";
         bool operationPressed = false;
 
         public MainWindow()
@@ -31,6 +33,8 @@ namespace calculater_training
 
             Button b = (Button)sender;
             result.Text = result.Text + b.Content;
+            testing = double.Parse(result.Text);
+            
             operationPressed = false;
 
         }
@@ -38,15 +42,24 @@ namespace calculater_training
         private void operator_click(object sender, RoutedEventArgs e)
 
         {
+            value += testing;
             Button b = (Button)sender;
             operation = (string)(b.Content);
-
-
-            value = double.Parse(result.Text);
-            operationPressed = true;
             equation.Content = value + " " + operation;
 
+            operationPressed = true;
+           
+                
           
+          
+                
+           
+
+        
+
+
+
+
 
 
 
@@ -54,12 +67,17 @@ namespace calculater_training
 
         private void btnEquals_Click(object sender, RoutedEventArgs e)
         {
+
             operationPressed = false;
             equation.Content = "";
             switch (operation)
             {
                 case "+":
-                    result.Text =(value +Double.Parse(result.Text)).ToString(); 
+                    result.Text = (value + Double.Parse(result.Text)).ToString();
+                    
+                    
+                   
+                  
                     break;
                 case "-":
                     result.Text = (value - Double.Parse(result.Text)).ToString();
@@ -73,15 +91,44 @@ namespace calculater_training
 
                 default:
                     break;
-                 
+
             }
 
+        }
+
+
+        private void btnEqual()
+        {
+            operationPressed = false;
+            equation.Content = "";
+            switch (operation)
+            {
+                case "+":
+                    result.Text = (value + Double.Parse(result.Text)).ToString();
+                    value = Double.Parse(result.Text);
+                    operation = "";
+                    break;
+                case "-":
+                    result.Text = (value - Double.Parse(result.Text)).ToString();
+                    break;
+                case "/":
+                    result.Text = (value / Double.Parse(result.Text)).ToString();
+                    break;
+                case "*":
+                    result.Text = (value * Double.Parse(result.Text)).ToString();
+                    break;
+
+                default:
+                    break;
+
+            }
         }
 
         private void btnClearEntry_Click(object sender, RoutedEventArgs e)
         {
             result.Text = "0";
             equation.Content = "";
+            operation = "";
         }
 
         private void btnClear_Click(object sender, RoutedEventArgs e)
@@ -89,6 +136,7 @@ namespace calculater_training
             result.Text = "0" ;
             value = 0;
             equation.Content = "";
+            operation = "";
         }
     }
 }
