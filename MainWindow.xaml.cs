@@ -43,6 +43,7 @@ namespace calculater_training
 
         {
             value += testing;
+            result.Text = Convert.ToString( value);
             Button b = (Button)sender;
             operation = (string)(b.Content);
             equation.Content = value + " " + operation;
@@ -51,17 +52,7 @@ namespace calculater_training
            
                 
           
-          
-                
-           
-
-        
-
-
-
-
-
-
+  
 
         }
 
