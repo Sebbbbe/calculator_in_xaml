@@ -105,29 +105,41 @@ namespace calculater_training
 
             operationPressed = false;
             equation.Content = "";
-            switch (operation)
+            if (cOperatorClickTwice == false)
             {
-                case "+":
-                    result.Text = (value + Double.Parse(result.Text)).ToString();
-                    
-                    
-                   
-                  
-                    break;
-                case "-":
-                    result.Text = (value - Double.Parse(result.Text)).ToString();
-                    break;
-                case "/":
-                    result.Text = (value / Double.Parse(result.Text)).ToString();
-                    break;
-                case "*":
-                    result.Text = (value * Double.Parse(result.Text)).ToString();
-                    break;
 
-                default:
-                    break;
+                switch (operation)
+                {
+                    case "+":
+                        result.Text = (value + Double.Parse(result.Text)).ToString();
+                        value = Convert.ToDouble(result.Text);
+
+
+
+
+                        break;
+                    case "-":
+                        result.Text = (value - Double.Parse(result.Text)).ToString();
+                        value = Convert.ToDouble(result.Text);
+                        break;
+                    case "/":
+                        result.Text = (value / Double.Parse(result.Text)).ToString();
+                        value = Convert.ToDouble(result.Text);
+                        break;
+                    case "*":
+                        result.Text = (value * Double.Parse(result.Text)).ToString();
+                        value = Convert.ToDouble(result.Text);
+
+                        break;
+
+                    default:
+                        break;
+
+                }
 
             }
+
+            cOperatorClickTwice = true;
 
         }
 
@@ -164,14 +176,21 @@ namespace calculater_training
             result.Text = "0";
             equation.Content = "";
             operation = "";
+           
+            testing = 0;
         }
 
         private void btnClear_Click(object sender, RoutedEventArgs e)
         {
             result.Text = "0" ;
-            value = 0;
             equation.Content = "";
             operation = "";
+           
+            value = 0;
+            testing = 0;
+         
+           
+           
         }
     }
 }
