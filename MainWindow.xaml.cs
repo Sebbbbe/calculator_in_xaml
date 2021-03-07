@@ -174,10 +174,11 @@ namespace calculater_training
         private void btnClearEntry_Click(object sender, RoutedEventArgs e)
         {
             result.Text = "0";
-            equation.Content = "";
-            operation = "";
-           
+            
+            
+
             testing = 0;
+           
         }
 
         private void btnClear_Click(object sender, RoutedEventArgs e)
