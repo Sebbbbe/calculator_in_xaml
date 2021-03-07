@@ -14,8 +14,10 @@ namespace calculater_training
      
         double value = 0;
         double testing = 0;
+        
         string operation = "";
-        string test = "";
+
+        bool cOperatorClickTwice = false;
         bool operationPressed = false;
 
         public MainWindow()
@@ -36,7 +38,7 @@ namespace calculater_training
             testing = double.Parse(result.Text);
             
             operationPressed = false;
-
+            cOperatorClickTwice = false;
         }
 
         private void operator_click(object sender, RoutedEventArgs e)
@@ -51,30 +53,33 @@ namespace calculater_training
               
                 
             }
-
-            switch (operation)
+            if (cOperatorClickTwice == false)
             {
+                switch (operation)
+                {
 
-                case "+":
-                    result.Text = (value + Double.Parse(result.Text)).ToString();
-                    value = double.Parse(result.Text);
-                   
-                    break;
-                case "-":
-                    result.Text = (value - Double.Parse(result.Text)).ToString();
-                    value = double.Parse(result.Text);
-                    break;
-                case "/":
-                    result.Text = (value / Double.Parse(result.Text)).ToString();
-                    value = double.Parse(result.Text);
-                    break;
-                case "*":
-                    result.Text = (value * Double.Parse(result.Text)).ToString();
-                    value = double.Parse(result.Text);
-                    break;
-                default:
-                    break;
+                    case "+":
+                        result.Text = (value + Double.Parse(result.Text)).ToString();
+                        value = double.Parse(result.Text);
+
+                        break;
+                    case "-":
+                        result.Text = (value - Double.Parse(result.Text)).ToString();
+                        value = double.Parse(result.Text);
+                        break;
+                    case "/":
+                        result.Text = (value / Double.Parse(result.Text)).ToString();
+                        value = double.Parse(result.Text);
+                        break;
+                    case "*":
+                        result.Text = (value * Double.Parse(result.Text)).ToString();
+                        value = double.Parse(result.Text);
+                        break;
+                    default:
+                        break;
+                }
             }
+           
 
 
             Button b = (Button)sender;
@@ -82,13 +87,16 @@ namespace calculater_training
 
 
 
+
+
             equation.Content = value + " " + operation;
 
             operationPressed = true;
-           
-                
-          
-  
+            cOperatorClickTwice = true;
+
+
+
+
 
         }
 
